@@ -1,6 +1,6 @@
 ---
   -hosts: all
-   tasks:
+  tasks:
      - name: stop the container
        shell: docker stop medilab-web
      - name: remove the container
