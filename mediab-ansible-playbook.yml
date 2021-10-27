@@ -1,0 +1,11 @@
+...
+   -hosts: all
+    tasks:
+      - name: stop the container
+        shell: docker stop medilab-web
+      - name: remove the container
+        shell: docker rm medilab-web 
+      - name: remove the tag image
+        shell: docker rmi -f preclinic:latest 
+      - name: run the container
+        shell: docker run -t --name=medilab-web -p 9898:9898  kingrk/preclinic:latest
